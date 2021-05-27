@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Live coding Axios</title>
+    </head>
+    <body>
+        <div id="root">
+            <!-- <h1>La mia parola casuale è: {{ randomWord }}</h1> -->
+            <template v-if="numeroUtente != 0 && numeroPc != 0">
+                <h2>Numero utente: {{ numeroUtente }}</h2>
+                <h2>Numero PC: {{ numeroPc }}</h2>
+                <!-- <h1 v-if="numeroUtente > numeroPc">Vince Utente</h1>
+                <h1 v-else-if="numeroUtente == numeroPc">Pareggio</h1>
+                <h1 v-else>Vince PC</h1> -->
+
+                <h1>Vince {{ (numeroUtente >= numeroPc) ? 'Utente' : 'PC' }}</h1>
+            </template>
+            
+        </div>
+        
+        <script src="js/game.js"></script>
+    </body>
+</html>
